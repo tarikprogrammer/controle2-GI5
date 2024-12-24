@@ -1,0 +1,26 @@
+type Query {
+    id:ID,
+    name:String,
+    createAt:String,
+
+}
+
+type Mutation {
+    addCommande (commande: Commande ) :Commande,
+    deleteCommande(id:ID):Boolean,
+    updateCommande(id:ID,commandeDto:CommandeDto):Commande
+}
+type Commande {
+    id:ID,
+    name:String,
+    createAt:String,
+
+}
+
+
+
+input CommandeDto {
+    id:ID,
+    name:String,
+    createAt:String,
+}

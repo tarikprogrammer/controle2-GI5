@@ -1,0 +1,25 @@
+type Query {
+   produit:Produit
+
+}
+
+type Mutation {
+    addProduct (productDto: ProductDto ) :Produit,
+    deleteProduit(id:ID):Boolean,
+    updateProduit(id:ID,produitDto:ProductDto):Produit
+}
+type Produit {
+    id:ID,
+    name:String,
+    price:Float,
+    quantuty:Float
+
+}
+
+
+
+input ProductDto {
+    name:String,
+    price:Float,
+    quantuty:Float
+}
